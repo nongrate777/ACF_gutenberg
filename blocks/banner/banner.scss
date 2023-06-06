@@ -1,0 +1,200 @@
+.banner {
+  @include mobile {
+    padding-top: 244px;
+    position: relative;
+    background-color: $grey;
+    &__inner {
+      position: relative;
+      z-index: 9999;
+      padding-top: 20px;
+      background: #fff;
+    }
+  }
+
+
+
+  .container {
+    padding: 4.167vw  /* 80/19.2 */ 0;
+    background: linear-gradient(to right, #ffffff 0%, #ffffff 55%, #8d8b90 55%, #8d8b90 100%);
+    position: relative;
+    @include mobile {
+      position: initial;
+      background: $white;
+      z-index: 999;
+      padding: 0;
+    }
+  }
+
+  &__button {
+    a {
+      font-weight: 600;
+      font-size: 0.833vw  /* 16/19.2 */;
+      line-height: 1.042vw  /* 20/19.2 */;
+      border: 1px solid $textDark;
+      padding: 1.042vw  /* 20/19.2 */ 2.083vw  /* 40/19.2 */;
+      color: $textDark;
+      margin-left: 4.6875vw  /* 90/19.2 */;
+      display: block;
+      width: fit-content;
+      transition: $animation-speed;
+      position: relative;
+      @include tablet{
+        margin-left: 3.90625vw  /* 30/7.68 */;
+        font-size: 1.82vw  /* 14/7.68 */;
+        padding: 20px 40px;
+      }
+      @include mobile {
+        margin-left: 20px;
+        font-size: 14px;
+        padding: 5.33vw  /* 20/3.75 */ 10.67vw  /* 40/3.75 */;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 44px;
+        height: 1px;
+        background-color: $textDark;
+        position: absolute;
+        right: -80px;
+        top: 50%;
+      }
+
+      &:hover {
+        border: 1px solid $buttonHover;
+        background-color: $buttonHover;
+      }
+    }
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.25vw  /* 24/19.2 */;
+    line-height: 1.5625vw  /* 30/19.2 */;
+    padding-left: 3.542vw  /* 68/19.2 */;
+    color: $textDark;
+    position: relative;
+    margin-left: 90px;
+    @include tablet{
+      margin-left: 3.90625vw  /* 30/7.68 */;
+      font-weight: 300;
+      font-size: 1.82vw  /* 14/7.68 */;
+      line-height: 11.04vw  /* 8/7.68 */;
+    }
+    @include mobile {
+      margin-left: 20px;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    &:before {
+      content: "";
+      width: 44px;
+      height: 1px;
+      background-color: $textDark;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      @include tablet{
+        width: 2.6vw  /* 20/7.68 */;
+      }
+    }
+  }
+
+  &__description {
+    margin-left: 4.6875vw  /* 90/19.2 */;
+    padding-bottom: 3.333vw  /* 64/19.2 */;
+    font-weight: 300;
+    font-size: 1.25vw  /* 24/19.2 */;
+    line-height: 1.5625vw  /* 30/19.2 */;
+    color: $textDark;
+    max-width: 26.458vw  /* 508/19.2 */;
+    @include tablet{
+      margin-left: 3.90625vw  /* 30/7.68 */;
+      font-weight: 300;
+      font-size: 2.34375vw  /* 18/7.68 */;
+      line-height: 3.125vw  /* 24/7.68 */;
+      max-width: 46.875vw  /* 360/7.68 */;
+    }
+    @include mobile {
+      margin-left: 20px;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  &__address {
+    margin-left: 4.6875vw  /* 90/19.2 */;
+    font-weight: 300;
+    font-size: 0.833vw  /* 16/19.2 */;
+    line-height: 1.042vw  /* 20/19.2 */;
+    color: $textDark;
+    padding-top: 4.6875vw  /* 90/19.2 */;
+    @include tablet{
+      margin-left: 3.90625vw  /* 30/7.68 */;
+      font-size: 1.82vw  /* 14/7.68 */;
+    }
+    @include mobile {
+      margin-left: 20px;
+      font-size: 14px;
+    }
+  }
+
+  &__svg {
+    padding: 3.333vw  /* 64/19.2 */ 0 3.333vw  /* 64/19.2 */ 4.6875vw  /* 90/19.2 */;
+    @include tablet{
+      max-width: 37.76vw  /* 290/7.68 */;
+      padding: 2.6vw  /* 20/7.68 */ 0;
+      margin-left: 3.90625vw  /* 30/7.68 */;
+    }
+    @include mobile {
+      margin: 0 20px;
+      padding: 20px 0;
+    }
+  }
+
+  &__image {
+    img {
+      position: absolute;
+      right: 0;
+      max-width: 37.448vw  /* 719/19.2 */;
+      max-height: 40.052vw  /* 769/19.2 */;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      object-fit: cover;
+      @include tablet{
+        max-width: 45.57vw  /* 350/7.68 */;
+        object-fit: cover;
+        bottom: 0;
+        right: 0;
+        max-height: 100%;
+      }
+      @include mobile {
+        max-width: 300px;
+        max-height: 300px;
+        top: 20px;
+        left: 5%;
+      }
+    }
+  }
+
+
+  h1 {
+    font-size: 2.604vw  /* 50/19.2 */;
+    margin: 0 0 1.5625vw  /* 30/19.2 */;
+
+  }
+
+  p {
+    font-size: 1.25vw  /* 24/19.2 */;
+    margin: 0;
+    max-width: 22.917vw  /* 440/19.2 */;
+
+
+  }
+}

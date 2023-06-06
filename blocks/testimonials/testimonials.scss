@@ -1,0 +1,208 @@
+.testimonials {
+  background-color: $white;
+  padding-bottom: 1.5625vw;  /* 30/19.2 */
+  padding-top: 5.208vw  /* 100/19.2 */;
+  position: relative;
+  @include mobile{
+    padding: 40px 20px;
+  }
+  &__title-wrapper {
+    h2 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 62px;
+      line-height: 2.8125vw  /* 54/19.2 */;
+      color: $textDark;
+      @include mobile{
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 44px;
+      }
+    }
+
+    &-instagram {
+      padding-bottom: 2.604vw  /* 50/19.2 */;
+
+      a {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.146vw  /* 22/19.2 */;
+        color: $textDark;
+        padding-left: 1.5625vw  /* 30/19.2 */;
+        position: relative;
+        @include mobile{
+          padding-left: 0;
+        }
+
+        span {
+          text-decoration: underline;
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          width: 0.625vw  /* 12/19.2 */;
+          height: 1px;
+          position: absolute;
+          background-color: $textDark;
+          left: 0;
+          top: 50%;
+          @include mobile{
+            display: none;
+
+          }
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          width: 22px;
+          height: 22px;
+          background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17.5 6C18.3284 6 19 5.32843 19 4.5C19 3.67157 18.3284 3 17.5 3C16.6716 3 16 3.67157 16 4.5C16 5.32843 16.6716 6 17.5 6ZM17.5 5C17.7761 5 18 4.77614 18 4.5C18 4.22386 17.7761 4 17.5 4C17.2239 4 17 4.22386 17 4.5C17 4.77614 17.2239 5 17.5 5Z' fill='%232E2E2E'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17 11C17 14.3137 14.3137 17 11 17C7.68629 17 5 14.3137 5 11C5 7.68629 7.68629 5 11 5C14.3137 5 17 7.68629 17 11ZM16 11C16 13.7614 13.7614 16 11 16C8.23858 16 6 13.7614 6 11C6 8.23858 8.23858 6 11 6C13.7614 6 16 8.23858 16 11Z' fill='%232E2E2E'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.653961 3.27606C0 4.55953 0 6.23969 0 9.6V12.4C0 15.7603 0 17.4405 0.653961 18.7239C1.2292 19.8529 2.14708 20.7708 3.27606 21.346C4.55953 22 6.23969 22 9.6 22H12.4C15.7603 22 17.4405 22 18.7239 21.346C19.8529 20.7708 20.7708 19.8529 21.346 18.7239C22 17.4405 22 15.7603 22 12.4V9.6C22 6.23969 22 4.55953 21.346 3.27606C20.7708 2.14708 19.8529 1.2292 18.7239 0.653961C17.4405 0 15.7603 0 12.4 0H9.6C6.23969 0 4.55953 0 3.27606 0.653961C2.14708 1.2292 1.2292 2.14708 0.653961 3.27606ZM12.4 1H9.6C7.90334 1 6.69099 1.00078 5.74064 1.07842C4.80197 1.15512 4.20731 1.30179 3.73005 1.54497C2.78924 2.02433 2.02433 2.78924 1.54497 3.73005C1.30179 4.20731 1.15512 4.80197 1.07842 5.74064C1.00078 6.69099 1 7.90334 1 9.6V12.4C1 14.0967 1.00078 15.309 1.07842 16.2594C1.15512 17.198 1.30179 17.7927 1.54497 18.27C2.02433 19.2108 2.78924 19.9757 3.73005 20.455C4.20731 20.6982 4.80197 20.8449 5.74064 20.9216C6.69099 20.9992 7.90334 21 9.6 21H12.4C14.0967 21 15.309 20.9992 16.2594 20.9216C17.198 20.8449 17.7927 20.6982 18.27 20.455C19.2108 19.9757 19.9757 19.2108 20.455 18.27C20.6982 17.7927 20.8449 17.198 20.9216 16.2594C20.9992 15.309 21 14.0967 21 12.4V9.6C21 7.90334 20.9992 6.69099 20.9216 5.74064C20.8449 4.80197 20.6982 4.20731 20.455 3.73005C19.9757 2.78924 19.2108 2.02433 18.27 1.54497C17.7927 1.30179 17.198 1.15512 16.2594 1.07842C15.309 1.00078 14.0967 1 12.4 1Z' fill='%232E2E2E'/%3E%3C/svg%3E%0A");
+          position: absolute;
+          right: -1.667vw  /* -32/19.2 */;
+          top: 0;
+          @include tablet{
+            right: -3.90625vw  /* -30/7.68 */;
+          }
+          @include mobile{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .swiper-slide__center {
+    position: relative;
+    @include mobile{
+      padding: 20px;
+    }
+  }
+
+  .video-link {
+    &:hover::before {
+      background-color: $white;
+      background-image: url("data:image/svg+xml,%3Csvg width='49' height='58' viewBox='0 0 49 58' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M44.8122 21.5833L10.2823 1.31344C9.2953 0.720095 8.17125 0.402846 7.02443 0.393936C5.22165 0.393936 3.49271 1.12158 2.21796 2.4168C0.943201 3.71201 0.227051 5.4687 0.227051 7.30041V50.803C0.22728 52.0186 0.547978 53.2119 1.1558 54.2588C1.76362 55.3058 2.63638 56.1682 3.68332 56.7564C4.73027 57.3446 5.91317 57.6371 7.10905 57.6035C8.30492 57.5698 9.47011 57.2113 10.4834 56.5653L45.0535 34.3746C46.1284 33.6911 47.0107 32.7363 47.6145 31.6033C48.2182 30.4703 48.5227 29.1977 48.4984 27.9095C48.4741 26.6214 48.1218 25.3616 47.4758 24.2529C46.8298 23.1442 45.9121 22.2245 44.8122 21.5833Z' fill='%232E2E2E'/%3E%3C/svg%3E%0A");
+      @include mobile{
+        display: none;
+      }
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 118px;
+      height: 118px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-color: rgba(234, 225, 215, 0.2);
+      background-image: url("data:image/svg+xml,%3Csvg width='49' height='58' viewBox='0 0 49 58' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M44.8122 21.5833L10.2823 1.31344C9.2953 0.720095 8.17125 0.402846 7.02443 0.393936C5.22165 0.393936 3.49271 1.12158 2.21796 2.4168C0.943201 3.71201 0.227051 5.4687 0.227051 7.30041V50.803C0.22728 52.0186 0.547978 53.2119 1.1558 54.2588C1.76362 55.3058 2.63638 56.1682 3.68332 56.7564C4.73027 57.3446 5.91317 57.6371 7.10905 57.6035C8.30492 57.5698 9.47011 57.2113 10.4834 56.5653L45.0535 34.3746C46.1284 33.6911 47.0107 32.7363 47.6145 31.6033C48.2182 30.4703 48.5227 29.1977 48.4984 27.9095C48.4741 26.6214 48.1218 25.3616 47.4758 24.2529C46.8298 23.1442 45.9121 22.2245 44.8122 21.5833Z' fill='white'/%3E%3C/svg%3E%0A");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      backdrop-filter: blur(3.5px);
+      border-radius: 3333px;
+      transform: translate(-50%, -50%);
+      transition: $animation-speed;
+
+    }
+  }
+
+
+
+  .swiper-wrapper-index{
+    position: relative;
+
+    .swiper-prev {
+      display: block;
+      width: 0.9375vw;  /* 18/19.2 */
+      height: 1.667vw;  /* 32/19.2 */
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      right: -2.34375vw  /* -45/19.2 */;
+      background-color: $white;
+      background-image: url("data:image/svg+xml,%3Csvg width='18' height='32' viewBox='0 0 18 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L16 16L1 31' stroke='%232E2E2E' stroke-width='2'/%3E%3C/svg%3E%0A");
+      @include tablet{
+        display: none;
+      }
+    }
+    .swiper-next {
+      display: block;
+      width: 18px;
+      height: 32px;
+      border: none;
+      background-color: $white;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      left: -2.34375vw  /* -45/19.2 */;
+      background-image: url("data:image/svg+xml,%3Csvg width='18' height='32' viewBox='0 0 18 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17 1L2 16L17 31' stroke='%232E2E2E' stroke-width='2'/%3E%3C/svg%3E%0A");
+      @include tablet{
+        display: none;
+      }
+    }
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: none;
+
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $white;
+    padding: 1.042vw  /* 20/19.2 */;
+    z-index: 10000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    .close-modal {
+      position: absolute;
+      top: 0.521vw  /* 10/19.2 */;
+      right: 0.521vw  /* 10/19.2 */;
+      background-color: transparent;
+      border: none;
+      font-size: 20px;
+      color: $white;
+      cursor: pointer;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 1.042vw  /* 20/19.2 */;
+        height: 0.104vw  /* 2/19.2 */;
+        background-color: $textDark;
+      }
+
+      &::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+
+
+  }
+}
+
+
+
+
+
+

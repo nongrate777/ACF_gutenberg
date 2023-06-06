@@ -1,0 +1,138 @@
+.feedback {
+  padding: 5.208vw  /* 100/19.2 */ 0;
+  background-color: $backgroundLight;
+  @include mobile {
+    padding: 40px 20px;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__left {
+    flex-basis: 50%;
+    @include mobile {
+      flex-basis: 100%;
+    }
+
+    h2 {
+      font-family: Gilroy, sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 3.229vw  /* 62/19.2 */;
+      padding-bottom: 1.25vw  /* 24/19.2 */;
+      padding-right: 7.8125vw  /* 150/19.2 */;
+      color: $textDark;
+      line-height: 2.8125vw  /* 54/19.2 */;
+      @include tablet{
+        font-size: 5.21vw  /* 40/7.68 */;
+      }
+      @include mobile {
+        padding-left: 0;
+        padding-right: 0;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 44px;
+      }
+    }
+
+    p {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.042vw  /* 20/19.2 */;
+      line-height: 1.25vw  /* 24/19.2 */;
+      color: $textDark;
+      @include tablet{
+        font-size: 2.34375vw  /* 18/7.68 */;
+        line-height: 3.125vw  /* 24/7.68 */;
+      }
+      @include mobile {
+        padding-left: 0;
+        padding-right: 0;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  &__right {
+    flex-basis: 50%;
+    position: relative;
+    @include tablet {
+      flex-basis: 100%;
+      margin-top: 3.125vw  /* 24/7.68 */;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 2.292vw  /* 44/19.2 */;
+      height: 1px;
+      background-color: $textDark;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      @include tablet {
+        display: none;
+      }
+    }
+
+    form {
+
+      input {
+        max-width: 13.542vw  /* 260/19.2 */;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.042vw  /* 20/19.2 */;
+        padding: 1.042vw  /* 20/19.2 */ 1.25vw  /* 24/19.2 */;
+        color: $textLight;
+        border: none;
+        @include tablet {
+          max-width: 100%;
+        }
+
+      }
+
+      input[type="submit"] {
+        background-color: $textDark;
+        cursor: pointer;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.833vw  /* 16/19.2 */;
+        line-height: 1.042vw  /* 20/19.2 */;
+        color: $white;
+        min-width: 11.458vw  /* 220/19.2 */;
+        transition: $animation-speed;
+
+        &:hover {
+          color: $textDark;
+          background-color: #FFE588;
+        }
+        @include tablet{
+          font-size: 14px;
+        }
+        @include mobile{
+          font-size: 14px;
+          padding: 3.73vw  /* 14/3.75 */ 6.4vw  /* 24/3.75 */;
+        }
+      }
+
+      p {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 1.25vw  /* 24/19.2 */;
+        @include tablet {
+          flex-direction: column;
+        }
+      }
+
+    }
+  }
+}
+

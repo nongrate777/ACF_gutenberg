@@ -1,0 +1,20 @@
+// Media Queries
+@mixin media1200 {
+  @media screen and (max-width: 1279.98px) {
+    @content;
+  }
+}
+
+
+
+@mixin tablet {
+  @media screen and (max-width: 1200px) and (min-aspect-ratio: 695/1024) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 375px) {
+    @content;
+  }
+}

@@ -1,0 +1,198 @@
+.accordion {
+  margin: 5.208vw  /* 100/19.2 */ 0 3.646vw  /* 70/19.2 */;
+  background-color: $white;
+  min-height: 31.25vw  /* 600/19.2 */;
+  @include mobile{
+    margin: 10.67vw  /* 40/3.75 */ 5.33vw  /* 20/3.75 */;
+  }
+  h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.229vw  /* 62/19.2 */;
+    line-height: 2.8125vw  /* 54/19.2 */;
+    color: $textDark;
+    @include tablet{
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 44px;
+    }
+  }
+
+  &__answer {
+
+    &-text {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 0.833vw  /* 16/19.2 */;
+      line-height: 1.25vw  /* 24/19.2 */;
+      color: $textLight;
+
+      strong {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.042vw  /* 20/19.2 */;
+        line-height: 1.25vw  /* 24/19.2 */;
+        color: $textDark;
+      }
+
+      div {
+        margin-bottom: 1.25vw  /* 24/19.2 */;
+      }
+    }
+
+    &-button {
+      a {
+        font-weight: 600;
+        font-size: 0.833vw  /* 16/19.2 */;
+        line-height: 1.042vw  /* 20/19.2 */;
+        border: 1px solid $textDark;
+        padding: 1.042vw  /* 20/19.2 */ 2.083vw  /* 40/19.2 */;
+        color: $textDark;
+        display: block;
+        width: fit-content;
+        transition: $animation-speed;
+        position: relative;
+        text-decoration: none;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 44px;
+          height: 1px;
+          background-color: $textDark;
+          position: absolute;
+          right: -4.167vw  /* -80/19.2 */;
+          top: 50%;
+        }
+
+        &:hover {
+          border: 1px solid $buttonHover;
+          background-color: $buttonHover;
+        }
+      }
+    }
+  }
+
+  &__menu a {
+    display: block;
+    font-size: 0.833vw  /* 16/19.2 */;
+    font-weight: bold;
+    margin-bottom: 0.521vw  /* 10/19.2 */;
+    text-decoration: none;
+    color: $textDark;
+  }
+
+  &__faq {
+    display: flex;
+    margin-bottom: 0.521vw  /* 10/19.2 */;
+    transition: $animation-speed;
+    width: 100%;
+  }
+
+  &__question {
+    width: 25%;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 0.521vw  /* 10/19.2 */;
+    padding: 0.521vw  /* 10/19.2 */;
+    height: fit-content;
+    @include tablet{
+      width: 100%;
+    }
+
+
+    &-item {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      color: $textDark;
+      &:hover{
+        color: $orange;
+      }
+    }
+
+    &-sub {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      visibility: hidden;
+      font-size: 18px;
+      margin-left: 0.625vw  /* 12/19.2 */;
+
+      &.active {
+        max-height: 15.625vw  /* 300/19.2 */;
+        transition: max-height 0.5s ease-in, opacity 0.5s ease-in, visibility 0s linear;
+        opacity: 1;
+        visibility: visible;
+        font-size: 18px;
+        padding-top: 1.25vw  /* 24/19.2 */;
+        font-weight: 300;
+        line-height: 24px;
+        color: $grey;
+        &:hover{
+          color: $orange;
+        }
+      }
+    }
+  }
+
+  .content {
+    flex: 2;
+    display: none;
+    padding: 0.521vw  /* 10/19.2 */;
+    background-color: $white;
+    transition: $animation-speed;
+    border-left: 1px solid $textDark;
+
+
+    &-left {
+      flex-basis: 50%;
+      padding-left: 2.604vw  /* 50/19.2 */;
+      @include tablet{
+        flex-basis: 100%;
+      }
+    }
+
+    &-right {
+      flex-basis: 50%;
+      padding-left: 2.604vw  /* 50/19.2 */;
+    }
+  }
+
+  &__faq.active .content {
+    display: flex;
+    position: absolute;
+    left: 18.229vw  /* 350/19.2 */;
+    flex-wrap: wrap;
+    top: 0;
+    @include tablet {
+      display: none;
+    }
+
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  &__question {
+    width: auto;
+    flex-basis: 25%;
+    flex-shrink: 0;
+    @include tablet{
+      width: 100%;
+      flex-basis: 100%;
+    }
+  }
+}
+
+
+
+
+
+
+
+

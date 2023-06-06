@@ -1,0 +1,27 @@
+.footer {
+  background: $white;
+  color: $textLight;
+  @include mobile{
+    padding: 0 20px;
+  }
+
+  .container {
+    display: flex;
+    padding: 2.604vw  /* 50/19.2 */ 0;
+    border-top: 1px solid $textLight;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__copyright {
+    font-weight: 300;
+    font-size: 0.833vw  /* 16/19.2 */;
+    line-height: 1.042vw  /* 20/19.2 */;
+    @include tablet{
+      font-size: 1.82vw  /* 14/7.68 */;
+    }
+    @include mobile{
+      font-size: 14px;
+    }
+  }
+}

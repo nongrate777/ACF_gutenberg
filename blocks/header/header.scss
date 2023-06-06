@@ -1,0 +1,197 @@
+.header {
+
+  background: transparent;
+  @include tablet{
+    background: $white;
+
+  }
+
+  .language-switcher {
+    @include tablet {
+      display: none;
+    }
+    li{
+      list-style-image: none;
+      list-style-type: none;
+
+      a{
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.042vw  /* 20/19.2 */;
+        color: $white;
+        text-decoration: underline;
+        text-transform: uppercase;
+
+      }
+    }
+    .current-lang {
+      display: none;
+    }
+  }
+
+  .container {
+    padding: 1.042vw  /* 20/19.2 */ 0;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 1.042vw  /* 20/19.2 */;
+    background: linear-gradient(to right, #ffffff 0%, #ffffff 55%, #8d8b90 55%, #8d8b90 100%);
+    @include tablet{
+      background: $white;
+      justify-content: space-between;
+      gap: 1.3vw  /* 10/7.68 */;
+    }
+  }
+
+  &__logo {
+    img {
+      max-width: 8.333vw  /* 160/19.2 */;
+@include tablet{
+  max-width: 13.02vw /* 100/7.68 */;
+  margin-left: 2.6vw  /* 20/7.68 */;
+}
+      @include mobile {
+        max-width: 64px;
+        margin-left: 15px;
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0 1.25vw  /* 24/19.2 */ 0 1.25vw;
+
+    @include tablet {
+      position: absolute;
+      z-index: 500;
+      background: $white;
+      top: 0;
+      left: 0;
+      width: 100%;
+      max-width: 44.27vw  /* 340/7.68 */;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+      transform: translateX(-100%);
+      transition: $animation-speed;
+
+      &_active {
+        transform: translateX(0);
+      }
+    }
+
+    li {
+      margin: 0 2.083vw  /* 40/19.2 */;
+      list-style: none;
+
+      @include tablet {
+        margin: 1.953125vw  /* 15/7.68 */ 0;
+      }
+    }
+
+    a {
+      color: $textDark;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.042vw  /* 20/19.2 */;
+      text-decoration: none;
+      transition: $animation-speed;
+
+      &:hover {
+        color: $orange;
+      }
+
+      &.current {
+        color: $orange;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__button {
+    text-decoration: none;
+    color: $white;
+    padding-left: 1.25vw  /* 24/19.2 */;
+    margin-left: 4.167vw  /* 80/19.2 */;
+    background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.41677 7.6768C10.1523 8.08554 10.8883 8.49437 11.6238 8.90313C11.9403 9.07891 12.0792 9.45191 11.9546 9.7921C11.3218 11.5209 9.46837 12.4335 7.72446 11.797C4.1535 10.4936 1.50656 7.84652 0.203022 4.27555C-0.433489 2.53166 0.479095 0.678227 2.20792 0.0454222C2.54811 -0.0792188 2.9211 0.0596524 3.09732 0.376247C3.50565 1.11178 3.91448 1.84775 4.32322 2.58324C4.51482 2.9283 4.46979 3.33787 4.20753 3.63252C3.86409 4.019 3.52071 4.40539 3.17726 4.79146C3.91037 6.57671 5.42325 8.08963 7.20852 8.82273C7.59459 8.47928 7.98098 8.1359 8.36746 7.79245C8.66254 7.5302 9.07177 7.48516 9.41674 7.67677L9.41677 7.6768Z' fill='white'/%3E%3C/svg%3E%0A") no-repeat 0% 50%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    transition: $animation-speed;
+    min-width: 130px;
+
+
+    &:hover {
+
+      color: $orange;
+    }
+    @include mobile{
+      color: $textDark;
+      background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.41677 7.6768C10.1523 8.08554 10.8883 8.49437 11.6238 8.90313C11.9403 9.07891 12.0792 9.45191 11.9546 9.7921C11.3218 11.5209 9.46837 12.4335 7.72446 11.797C4.1535 10.4936 1.50656 7.84652 0.203022 4.27555C-0.433489 2.53166 0.479095 0.678227 2.20792 0.0454222C2.54811 -0.0792188 2.9211 0.0596524 3.09732 0.376247C3.50565 1.11178 3.91448 1.84775 4.32322 2.58324C4.51482 2.9283 4.46979 3.33787 4.20753 3.63252C3.86409 4.019 3.52071 4.40539 3.17726 4.79146C3.91037 6.57671 5.42325 8.08963 7.20852 8.82273C7.59459 8.47928 7.98098 8.1359 8.36746 7.79245C8.66254 7.5302 9.07177 7.48516 9.41674 7.67677L9.41677 7.6768Z' fill='%232E2E2E'/%3E%3C/svg%3E%0A") no-repeat 0% 50%;
+      font-size: 16px;
+
+    }
+    @include tablet {
+      margin: 0 2.34375vw  /* 18/7.68 */ 0 auto;
+      font-size: 16px;
+      color: $textDark;
+      background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.41677 7.6768C10.1523 8.08554 10.8883 8.49437 11.6238 8.90313C11.9403 9.07891 12.0792 9.45191 11.9546 9.7921C11.3218 11.5209 9.46837 12.4335 7.72446 11.797C4.1535 10.4936 1.50656 7.84652 0.203022 4.27555C-0.433489 2.53166 0.479095 0.678227 2.20792 0.0454222C2.54811 -0.0792188 2.9211 0.0596524 3.09732 0.376247C3.50565 1.11178 3.91448 1.84775 4.32322 2.58324C4.51482 2.9283 4.46979 3.33787 4.20753 3.63252C3.86409 4.019 3.52071 4.40539 3.17726 4.79146C3.91037 6.57671 5.42325 8.08963 7.20852 8.82273C7.59459 8.47928 7.98098 8.1359 8.36746 7.79245C8.66254 7.5302 9.07177 7.48516 9.41674 7.67677L9.41677 7.6768Z' fill='%232E2E2E'/%3E%3C/svg%3E%0A") no-repeat 0% 50%;
+    }
+  }
+
+  &__burger {
+    display: none;
+    position: relative;
+    width: 20px;
+    height: 14px;
+    cursor: pointer;
+    z-index: 700;
+
+    @include tablet {
+      display: block;
+    }
+
+    span {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: $textDark;
+      transition: .3s;
+
+      &:nth-child(1) {
+        transform: translate(-50%, calc(-50% - 7px));
+      }
+
+      &:nth-child(2) {
+        transform: translate(-50%, -50%);
+      }
+
+      &:nth-child(3) {
+        transform: translate(-50%, calc(-50% + 7px));
+      }
+    }
+
+    &_active {
+      span {
+        &:nth-child(1) {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
+    }
+  }
+}

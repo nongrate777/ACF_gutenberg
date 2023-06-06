@@ -1,0 +1,35 @@
+@import "~normalize.css";
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    font-family: Gilroy, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: $textDark;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h2 {
+    font-size: 30px;
+    margin: 0 0 30px;
+}
+
+p {
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
